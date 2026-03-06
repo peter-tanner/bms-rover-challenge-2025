@@ -35,7 +35,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define UART_DBG
+// #define UART_DBG
 lwrb_t usart_tx_rb;
 char uart_txt_buf[512];
 uint8_t usart_tx_rb_data[1024];
@@ -167,9 +167,11 @@ uint8_t can2_move_to_fifo()
         }
         if (delay > 0)
         {
+#ifdef UART_DBG
             char buf[32];
             snprintf(buf, sizeof(buf), "CAN_OVERFLOW %d\r\n", delay);
             usart_send_string(buf);
+#endif
         }
         usart_send_string("CAN_OK\r\n");
         started = 1;
@@ -209,8 +211,10 @@ void tx_ssbc(uint16_t priority)
         .safety_status_C = DIRCMD_READ_SafetyStatusC_Raw());
     can2_transmit(&ssbc, sizeof(ssbc), priority);
 
+#ifdef UART_DBG
     snprintf(uart_txt_buf, sizeof(uart_txt_buf), SSBC_UART_FMT);
     usart_send_string(uart_txt_buf);
+#endif
 }
 
 static void tx_snapshot(int16_t snapshot[16], enum event_type snapshot_type)
@@ -244,8 +248,11 @@ void tx_ssa(uint16_t priority)
         safety_status_A,
         .safety_status_A = DIRCMD_READ_SafetyStatusA_Raw());
     can2_transmit(&ssa, sizeof(ssa), priority);
+
+#ifdef UART_DBG
     snprintf(uart_txt_buf, sizeof(uart_txt_buf), SSA_UART_FMT);
     usart_send_string(uart_txt_buf);
+#endif
 
     if (BIT_SafetyStatusA_COV(ssa.safety_status_A) && priority == CAN_MSG_PRI_ERR)
     {
@@ -343,7 +350,6 @@ void tx_fullscan()
     }
     snprintf(uart_txt_buf, sizeof(uart_txt_buf), FULLSCAN_FMT);
     usart_send_string(uart_txt_buf);
-
 #endif
 
     for (uint8_t i = 0; i < 6; i++)
@@ -512,6 +518,7 @@ void alarm_cb()
         reset_fault_alarm(event_bits);
         tx_event(event_bits);
         DIRCMD_WRITE_AlarmStatus_Raw(event_bits);
+
 #ifdef UART_DBG
         snprintf(uart_txt_buf, sizeof(uart_txt_buf), ALARM_UART_FMT);
         usart_send_string(uart_txt_buf);
@@ -583,20 +590,14 @@ int main(void)
     // NOTE: do not execute CMD_SUBCMD_FET_ENABLE(); at this point - toggles FET_EN register to off.
     usart_send_string("BQ769X2 INITIALIZATION COMPLETED\r\n");
     alarm_cb();
-    bq769x2_delay_us(10000);
-    bq769x2_delay_us(10000);
-#if 0
-    CMD_SUBCMD_SLEEP_DISABLE(); 
-    // Sleep mode is enabled by default. For this example, Sleep is disabled to
-    // demonstrate full-speed measurements in Normal mode.
-#endif
-
     bq769x2_delay_us(60000);
     bq769x2_delay_us(60000);
     bq769x2_delay_us(60000);
     bq769x2_delay_us(60000); // wait to start measurements after FETs close
-    // sfx_fourtone();
+#ifdef UART_DBG
     HAL_UART_Init(&hlpuart1);
+#endif
+
     alarm_cb();
     can2_transmit(CREATE_PTR_L(bms_status, .bms_status = BMS_STATUS_INIT), CAN_MSG_PRI_TLM_SLOW);
     can2_transmit(CREATE_PTR_L(bms_status, .bms_status = BMS_STATUS_INIT), CAN_MSG_PRI_TLM_SLOW);
@@ -606,9 +607,9 @@ int main(void)
     alarm_cb();
     sfx_onetone(932, 180, 253);
     bq769x2_delay_us(60000);
-    // CMD_SUBCMD_ALL_FETS_ON();
     HAL_PWR_EnableSleepOnExit(); // EASY SLEEP MODE - TODO: REIMPLEMENT WITH STOP MODE FOR MORE SAVING.
-                                 /* USER CODE END 2 */
+
+    /* USER CODE END 2 */
 
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
@@ -632,92 +633,6 @@ int main(void)
             while (1)
                 ;
         }
-
-        /* Reads Cell, Stack, Pack, LD Voltages, Pack Current and TS1/TS3 Temperatures in a loop
-         * This basic example polls the Alarm Status register to see if protections have triggered or new measurements are ready
-         * The ALERT pin can also be used as an interrupt to the microcontroller for fastest response time instead of polling
-         * In this example the LED on the microcontroller board will be turned on to indicate a protection has triggered and will
-         * be turned off if the protection condition has cleared.
-         */
-
-#if 0
-        //
-        if_debounce(BIT_AlarmStatus_SHUTV(alarm), RESEND_INTERVAL)
-        {
-            CAN2_TRANSMIT(CREATE_PTR_L(pack_voltage,
-                                       .fet_status = DIRCMD_READ_FETStatus_Raw(),
-                                       .stack_voltage_userV = DIRCMD_READ_StackVoltage_userV(),
-                                       .ld_pin_voltage_userV = DIRCMD_READ_LDPinVoltage_userV(),
-                                       .pack_pin_voltage_userV = DIRCMD_READ_PACKPinVoltage_userV()));
-            DIRCMD_WRITE_AlarmStatus_Raw(AlarmStatus_SHUTV_CLEAR);
-        }
-        //
-
-        // TODO: SEE HOW OFTEN CB LATCHES TO SEE IF POLLING IS NECESSARY
-        if_debounce(BIT_AlarmStatus_CB(alarm), RESEND_INTERVAL)
-        {
-            CAN2_TRANSMIT(CREATE_PTR_L(cb_status,
-                                       .cb_active_cells = bq769x2_h_cb_get_active_cells(),
-                                       .cb_present_time_s = bq769x2_h_cb_get_pack_balancing_time()));
-
-            //  TODO:
-            debounce(10000)
-            {
-                struct balancing_time_T balancing_time = bq769x2_h_cb_get_cell_balancing_time();
-#define GEN_TX_CB_TIME_S(cell) CAN2_TRANSMIT(CREATE_PTR_L(cb_time_##cell, .cb_time_##cell##_s = balancing_time.cb_##cell##_s));
-                GEN_TX_CB_TIME_S(1);
-                GEN_TX_CB_TIME_S(2);
-                GEN_TX_CB_TIME_S(3);
-                GEN_TX_CB_TIME_S(4);
-                GEN_TX_CB_TIME_S(5);
-                GEN_TX_CB_TIME_S(6);
-                GEN_TX_CB_TIME_S(7);
-                GEN_TX_CB_TIME_S(8);
-                GEN_TX_CB_TIME_S(9);
-                GEN_TX_CB_TIME_S(10);
-                GEN_TX_CB_TIME_S(11);
-                GEN_TX_CB_TIME_S(12);
-                GEN_TX_CB_TIME_S(13);
-                GEN_TX_CB_TIME_S(14);
-                GEN_TX_CB_TIME_S(15);
-                GEN_TX_CB_TIME_S(16);
-#undef GEN_TX_CB_TIME_S
-            }
-
-            // TODO: NOTE: IF LATCHED, END LATCH HERE.
-            // DIRCMD_WRITE_AlarmStatus_Raw(AlarmStatus_CB_CLEAR);
-        }
-        //
-#endif
-        // TODO: DIRCMD_READ_ControlStatus_Raw();
-        // TODO: ONLY SEND DATA WHEN CB ALARM FLAG IS RAISED?
-        // TODO: does this handle overflow
-
-        // if (BIT_AlarmStatus_SSBC(alarm) || BIT_AlarmStatus_SSA(alarm))
-        // { // If Safety Status bits are showing in AlarmStatus register
-        //     // Read the Safety Status registers to find which protections have triggered
-        //     safety_status_A = DIRCMD_READ_SafetyStatusA_Raw();
-        //     safety_status_B = DIRCMD_READ_SafetyStatusB_Raw();
-        //     safety_status_C = DIRCMD_READ_SafetyStatusC_Raw();
-        //     if (safety_status_A || safety_status_B || safety_status_C)
-        //     {
-        //         HAL_GPIO_WritePin(FAULT_LAMP_GPIO_Port, FAULT_LAMP_Pin, GPIO_PIN_SET);
-        //     } // Turn on the LED to indicate Protection has triggered
-        //     DIRCMD_WRITE_AlarmStatus_Raw(AlarmStatus_SSA_CLEAR | AlarmStatus_SSBC_CLEAR);
-        // }
-        // else
-        // {
-        //     if (safety_status_A || safety_status_B || safety_status_C)
-        //     {
-        //         safety_status_A = DIRCMD_READ_SafetyStatusA_Raw();
-        //         safety_status_B = DIRCMD_READ_SafetyStatusB_Raw();
-        //         safety_status_C = DIRCMD_READ_SafetyStatusC_Raw();
-        //         if (!(safety_status_A || safety_status_B || safety_status_C))
-        //         {
-        //             HAL_GPIO_WritePin(FAULT_LAMP_GPIO_Port, FAULT_LAMP_Pin, GPIO_PIN_RESET);
-        //         }
-        //     } // Turn off the LED if Safety Status has cleared which means the protection condition is no longer present
-        // }
     }
     /* USER CODE END 3 */
 }
@@ -864,7 +779,7 @@ static void MX_LPUART1_UART_Init(void)
 {
 
     /* USER CODE BEGIN LPUART1_Init 0 */
-
+#ifdef UART_DBG
     /* USER CODE END LPUART1_Init 0 */
 
     /* USER CODE BEGIN LPUART1_Init 1 */
@@ -898,7 +813,7 @@ static void MX_LPUART1_UART_Init(void)
         Error_Handler();
     }
     /* USER CODE BEGIN LPUART1_Init 2 */
-
+#endif
     /* USER CODE END LPUART1_Init 2 */
 }
 
@@ -1365,6 +1280,7 @@ static void FDCAN2_classic_config(void)
  */
 uint8_t usart_start_tx_dma_transfer(void)
 {
+#ifdef UART_DBG
     uint32_t primask;
     uint8_t started = 0;
 
@@ -1404,6 +1320,9 @@ uint8_t usart_start_tx_dma_transfer(void)
     }
     __set_PRIMASK(primask);
     return started;
+#else
+    return 0;
+#endif
 }
 
 /**
@@ -1412,8 +1331,10 @@ uint8_t usart_start_tx_dma_transfer(void)
  */
 void usart_send_string(const char *str)
 {
+#ifdef UART_DBG
     lwrb_write(&usart_tx_rb, str, strlen(str)); /* Write data to transmit buffer */
     usart_start_tx_dma_transfer();
+#endif
 }
 
 /**
@@ -1423,11 +1344,14 @@ void usart_send_string(const char *str)
  */
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 {
+
     if (huart == &hlpuart1)
     {
+#ifdef UART_DBG
         lwrb_skip(&usart_tx_rb, usart_tx_dma_current_len);
         usart_tx_dma_current_len = 0;
         usart_start_tx_dma_transfer();
+#endif
     }
 }
 

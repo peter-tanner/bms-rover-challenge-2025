@@ -49,7 +49,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     Core/Src/bq769x2_st.c
     Core/Src/bq769x2_config.c
     Core/Src/bq769x2.c
-    Core/Src/f18.c
+    Core/Src/buzzwarn.c
     Core/Src/lwrb.c
 )
 

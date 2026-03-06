@@ -34,12 +34,13 @@ extern "C" {
 #include "bq769x2.h"
 #include "bq769x2_config.h"
 #include "bq769x2_st.h"
+#include "buzzwarn.h"
 #include "can_types.h"
 #include "can_types_uart.h"
-#include "f18.h"
 #include "helper.h"
 #include "lwrb.h"
 #include <stdbool.h>
+
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -67,7 +68,7 @@ void Error_Handler(void);
 
 /* Private defines -----------------------------------------------------------*/
 #define HCLK_MHz 16
-#define HCLK_kHz HCLK_MHz*1000
+#define HCLK_kHz HCLK_MHz * 1000
 #define ALARM_CALLBACK_WATCHDOG_ms 6000
 #define ALERT_Pin GPIO_PIN_13
 #define ALERT_GPIO_Port GPIOC
