@@ -1139,6 +1139,7 @@ static void MX_GPIO_Init(void)
 
     /* GPIO Ports Clock Enable */
     __HAL_RCC_GPIOC_CLK_ENABLE();
+    __HAL_RCC_GPIOF_CLK_ENABLE();
     __HAL_RCC_GPIOA_CLK_ENABLE();
     __HAL_RCC_GPIOB_CLK_ENABLE();
     __HAL_RCC_GPIOD_CLK_ENABLE();
@@ -1147,7 +1148,7 @@ static void MX_GPIO_Init(void)
     HAL_GPIO_WritePin(GPIOA, LED_GREEN_Pin | BUCK_EN_Pin | FDCAN12_SHUTDOWN_Pin | FDCAN1_SILENCE_Pin, GPIO_PIN_RESET);
 
     /*Configure GPIO pin Output Level */
-    HAL_GPIO_WritePin(GPIOB, FAULT_LAMP_Pin | RJ8P8C_LED_G_Pin | RJ8P8C_LED_Y_Pin | FDCAN2_SILENCE_Pin | GND3_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOB, FAULT_LAMP_Pin | RJ8P8C_LED_G_Pin | RJ8P8C_LED_Y_Pin | FDCAN2_SILENCE_Pin, GPIO_PIN_RESET);
 
     /*Configure GPIO pin Output Level */
     HAL_GPIO_WritePin(RST_SHUT_GPIO_Port, RST_SHUT_Pin, GPIO_PIN_RESET);
@@ -1157,6 +1158,18 @@ static void MX_GPIO_Init(void)
     GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
     GPIO_InitStruct.Pull = GPIO_PULLUP;
     HAL_GPIO_Init(ALERT_GPIO_Port, &GPIO_InitStruct);
+
+    /*Configure GPIO pins : PC14 PC15 TO_PD1__HIZ_Pin TO_PD0__HIZ_Pin */
+    GPIO_InitStruct.Pin = GPIO_PIN_14 | GPIO_PIN_15 | TO_PD1__HIZ_Pin | TO_PD0__HIZ_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+    /*Configure GPIO pins : PF0 PF1 PF2 */
+    GPIO_InitStruct.Pin = GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2;
+    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
 
     /*Configure GPIO pin : CLEAR_FAULT_Pin */
     GPIO_InitStruct.Pin = CLEAR_FAULT_Pin;
@@ -1171,28 +1184,31 @@ static void MX_GPIO_Init(void)
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-    /*Configure GPIO pins : PA6 PA7 */
-    GPIO_InitStruct.Pin = GPIO_PIN_6 | GPIO_PIN_7;
-    GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
+    /*Configure GPIO pins : TO_PA7__HIZ_Pin PA6 PA7 PA11
+                             PA12 TO_PA14_BOOT0__HIZA15_Pin */
+    GPIO_InitStruct.Pin = TO_PA7__HIZ_Pin | GPIO_PIN_6 | GPIO_PIN_7 | GPIO_PIN_11 | GPIO_PIN_12 | TO_PA14_BOOT0__HIZA15_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-    GPIO_InitStruct.Alternate = GPIO_AF8_I2C2;
     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-    /*Configure GPIO pins : FAULT_LAMP_Pin RJ8P8C_LED_G_Pin RJ8P8C_LED_Y_Pin FDCAN2_SILENCE_Pin
-                             GND3_Pin */
-    GPIO_InitStruct.Pin = FAULT_LAMP_Pin | RJ8P8C_LED_G_Pin | RJ8P8C_LED_Y_Pin | FDCAN2_SILENCE_Pin | GND3_Pin;
+    /*Configure GPIO pins : FAULT_LAMP_Pin RJ8P8C_LED_G_Pin RJ8P8C_LED_Y_Pin FDCAN2_SILENCE_Pin */
+    GPIO_InitStruct.Pin = FAULT_LAMP_Pin | RJ8P8C_LED_G_Pin | RJ8P8C_LED_Y_Pin | FDCAN2_SILENCE_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-    /*Configure GPIO pins : PD0 PD1 */
-    GPIO_InitStruct.Pin = GPIO_PIN_0 | GPIO_PIN_1;
-    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    /*Configure GPIO pins : PB1 TO_PA14_BOOT0__HIZ_Pin PB14 GND__HIZ_Pin
+                             GND__HIZB6_Pin GND__HIZB7_Pin */
+    GPIO_InitStruct.Pin = GPIO_PIN_1 | TO_PA14_BOOT0__HIZ_Pin | GPIO_PIN_14 | GND__HIZ_Pin | GND__HIZB6_Pin | GND__HIZB7_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-    GPIO_InitStruct.Alternate = GPIO_AF3_FDCAN1;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+    /*Configure GPIO pins : PD0 PD1 TO_PA14_BOOT0__HIZD2_Pin */
+    GPIO_InitStruct.Pin = GPIO_PIN_0 | GPIO_PIN_1 | TO_PA14_BOOT0__HIZD2_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
     HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
     /*Configure GPIO pin : RST_SHUT_Pin */

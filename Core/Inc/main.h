@@ -53,7 +53,7 @@ extern "C" {
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
-    // #define ENABLE_SLEEPING
+// #define ENABLE_SLEEPING
 /* USER CODE END EM */
 
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
@@ -78,8 +78,12 @@ void Error_Handler(void);
 #define CLEAR_FAULT_GPIO_Port GPIOA
 #define LED_GREEN_Pin GPIO_PIN_4
 #define LED_GREEN_GPIO_Port GPIOA
+#define TO_PA7__HIZ_Pin GPIO_PIN_5
+#define TO_PA7__HIZ_GPIO_Port GPIOA
 #define FAULT_LAMP_Pin GPIO_PIN_0
 #define FAULT_LAMP_GPIO_Port GPIOB
+#define TO_PA14_BOOT0__HIZ_Pin GPIO_PIN_2
+#define TO_PA14_BOOT0__HIZ_GPIO_Port GPIOB
 #define RJ8P8C_LED_G_Pin GPIO_PIN_10
 #define RJ8P8C_LED_G_GPIO_Port GPIOB
 #define RJ8P8C_LED_Y_Pin GPIO_PIN_11
@@ -90,16 +94,28 @@ void Error_Handler(void);
 #define BUCK_EN_GPIO_Port GPIOA
 #define FDCAN12_SHUTDOWN_Pin GPIO_PIN_9
 #define FDCAN12_SHUTDOWN_GPIO_Port GPIOA
+#define TO_PD1__HIZ_Pin GPIO_PIN_6
+#define TO_PD1__HIZ_GPIO_Port GPIOC
+#define TO_PD0__HIZ_Pin GPIO_PIN_7
+#define TO_PD0__HIZ_GPIO_Port GPIOC
 #define FDCAN1_SILENCE_Pin GPIO_PIN_10
 #define FDCAN1_SILENCE_GPIO_Port GPIOA
+#define TO_PA14_BOOT0__HIZA15_Pin GPIO_PIN_15
+#define TO_PA14_BOOT0__HIZA15_GPIO_Port GPIOA
+#define TO_PA14_BOOT0__HIZD2_Pin GPIO_PIN_2
+#define TO_PA14_BOOT0__HIZD2_GPIO_Port GPIOD
 #define RST_SHUT_Pin GPIO_PIN_3
 #define RST_SHUT_GPIO_Port GPIOD
-#define GND3_Pin GPIO_PIN_3
-#define GND3_GPIO_Port GPIOB
+#define GND__HIZ_Pin GPIO_PIN_3
+#define GND__HIZ_GPIO_Port GPIOB
 #define CFETOFF_Pin GPIO_PIN_4
 #define CFETOFF_GPIO_Port GPIOB
 #define DFETOFF_Pin GPIO_PIN_5
 #define DFETOFF_GPIO_Port GPIOB
+#define GND__HIZB6_Pin GPIO_PIN_6
+#define GND__HIZB6_GPIO_Port GPIOB
+#define GND__HIZB7_Pin GPIO_PIN_7
+#define GND__HIZB7_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
