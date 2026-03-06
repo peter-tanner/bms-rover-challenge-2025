@@ -1,0 +1,508 @@
+VERSION ""
+
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_: 
+BU_: ROVER 
+BO_ 2024 BMS_Telemetry: 8 ROVER
+   SG_ zid M : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+   SG_ offset m1M : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+   SG_ T_fullscan_cuv_cov m1 : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+   SG_ cv1 m0 : 16|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv2 m0 : 32|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv3 m0 : 48|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv4 m3 : 16|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv5 m3 : 32|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv6 m3 : 48|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv7 m6 : 16|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv8 m6 : 32|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv9 m6 : 48|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv10 m9 : 16|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv11 m9 : 32|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv12 m9 : 48|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv13 m12 : 16|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv14 m12 : 32|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv15 m12 : 48|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv16 m15 : 16|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ CC2_current m15 : 32|16@1- (10,0) [-32768|32767] "mA" Vector__XXX
+   SG_ cb_offset m12M : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+   SG_ cb_1 m0 : 16|32@1+ (1,0) [0|4.29497e+09] "s" Vector__XXX
+   SG_ cb_2 m1 : 16|32@1+ (1,0) [0|4.29497e+09] "s" Vector__XXX
+   SG_ cb_3 m2 : 16|32@1+ (1,0) [0|4.29497e+09] "s" Vector__XXX
+   SG_ cb_4 m3 : 16|32@1+ (1,0) [0|4.29497e+09] "s" Vector__XXX
+   SG_ cb_5 m4 : 16|32@1+ (1,0) [0|4.29497e+09] "s" Vector__XXX
+   SG_ cb_6 m5 : 16|32@1+ (1,0) [0|4.29497e+09] "s" Vector__XXX
+   SG_ cb_7 m6 : 16|32@1+ (1,0) [0|4.29497e+09] "s" Vector__XXX
+   SG_ cb_8 m7 : 16|32@1+ (1,0) [0|4.29497e+09] "s" Vector__XXX
+   SG_ cb_9 m8 : 16|32@1+ (1,0) [0|4.29497e+09] "s" Vector__XXX
+   SG_ cb_10 m9 : 16|32@1+ (1,0) [0|4.29497e+09] "s" Vector__XXX
+   SG_ cb_11 m10 : 16|32@1+ (1,0) [0|4.29497e+09] "s" Vector__XXX
+   SG_ cb_12 m11 : 16|32@1+ (1,0) [0|4.29497e+09] "s" Vector__XXX
+   SG_ cb_13 m12 : 16|32@1+ (1,0) [0|4.29497e+09] "s" Vector__XXX
+   SG_ cb_14 m13 : 16|32@1+ (1,0) [0|4.29497e+09] "s" Vector__XXX
+   SG_ cb_15 m14 : 16|32@1+ (1,0) [0|4.29497e+09] "s" Vector__XXX
+   SG_ cb_16 m15 : 16|32@1+ (1,0) [0|4.29497e+09] "s" Vector__XXX
+   SG_ cb_present_time m11 : 24|16@1+ (1,0) [0|65535] "s" Vector__XXX
+   SG_ c_1_active m11 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ c_2_active m11 : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ c_3_active m11 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ c_4_active m11 : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ c_5_active m11 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ c_6_active m11 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ c_7_active m11 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ c_8_active m11 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ c_9_active m11 : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ c_10_active m11 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ c_11_active m11 : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ c_12_active m11 : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ c_13_active m11 : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ c_14_active m11 : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ c_15_active m11 : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ c_16_active m11 : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ stack_voltage m2 : 8|16@1- (10,0) [-32768|32767] "mV" Vector__XXX
+   SG_ pack_pin_voltage m2 : 24|16@1- (10,0) [-32768|32767] "mV" Vector__XXX
+   SG_ ld_pin_voltage m2 : 40|16@1- (10,0) [-32768|32767] "mV" Vector__XXX
+   SG_ ts1 m3 : 8|16@1- (0.1,-273.2) [-32768|32767] "degC" Vector__XXX
+   SG_ ts3 m3 : 24|16@1- (0.1,-273.2) [-32768|32767] "degC" Vector__XXX
+   SG_ tint m3 : 40|16@1- (0.1,-273.2) [-32768|32767] "degC" Vector__XXX
+   SG_ SSA_SCD m4 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSA_OCD2 m4 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSA_OCD1 m4 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSA_OCC m4 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSA_COV m4 : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSA_CUV m4 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSB_OTF m5 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSB_OTINT m5 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSB_OTD m5 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSB_OTC m5 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSB_UTINT m5 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSB_UTD m5 : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSB_UTC m5 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSC_OCD3 m5 : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSC_SCDL m5 : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSC_OCDL m5 : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSC_COVL m5 : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSC_PTO m5 : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSC_HWDF m5 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAA_SCD m8 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAA_OCD2 m8 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAA_OCD1 m8 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAA_OCC m8 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAA_COV m8 : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAA_CUV m8 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAB_OTF m8 : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAB_OTINT m8 : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAB_OTD m8 : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAB_OTC m8 : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAB_UTINT m8 : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAB_UTD m8 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAB_UTC m8 : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAC_OCD3 m8 : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAC_SCDL m8 : 30|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAC_OCDL m8 : 29|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAC_COVL m8 : 28|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAC_PTOS m8 : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_SSBC m10 : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_SSA m10 : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_PF m10 : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_MSK_SFALERT m10 : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_MSK_PFALERT m10 : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_INITSTART m10 : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_INITCOMP m10 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_XCHG m10 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_XDSG m10 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_SHUTV m10 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_FUSE m10 : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_CB m10 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_WAKE m10 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ FETSTAT_ALRT_PIN m9 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ FETSTAT_DDSG_PIN m9 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ FETSTAT_DCHG_PIN m9 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ FETSTAT_PDSG_FET m9 : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ FETSTAT_DSG_FET m9 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ FETSTAT_PCHG_FET m9 : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ FETSTAT_CHG_FET m9 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ CTLSTAT_DEEPSLEEP m9 : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ CTLSTAT_LD_TIMEOUT m9 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ CTLSTAT_LD_ON m9 : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_SLEEP m9 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_SD_CMD m9 : 45|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_PF m9 : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_SS m9 : 43|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_FUSE m9 : 42|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_SEC1 m9 : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_SEC0 m9 : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_OTPB m9 : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_OTPW m9 : 38|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_COW_CHK m9 : 37|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_WD m9 : 36|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_POR m9 : 35|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_SLEEP_EN m9 : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_PCHG_MODE m9 : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_CFGUPDATE m9 : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 488 BMS_ERROR: 8 ROVER
+   SG_ zid M : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+   SG_ offset m1M : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+   SG_ T_fullscan_cuv_cov m1 : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+   SG_ cv1 m0 : 16|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv2 m0 : 32|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv3 m0 : 48|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv4 m3 : 16|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv5 m3 : 32|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv6 m3 : 48|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv7 m6 : 16|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv8 m6 : 32|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv9 m6 : 48|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv10 m9 : 16|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv11 m9 : 32|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv12 m9 : 48|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv13 m12 : 16|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv14 m12 : 32|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv15 m12 : 48|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ cv16 m15 : 16|16@1- (1,0) [-32768|32767] "mV" Vector__XXX
+   SG_ CC2_current m15 : 32|16@1- (10,0) [-32768|32767] "mA" Vector__XXX
+   SG_ SSA_SCD m4 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSA_OCD2 m4 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSA_OCD1 m4 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSA_OCC m4 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSA_COV m4 : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSA_CUV m4 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSB_OTF m5 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSB_OTINT m5 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSB_OTD m5 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSB_OTC m5 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSB_UTINT m5 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSB_UTD m5 : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSB_UTC m5 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSC_OCD3 m5 : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSC_SCDL m5 : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSC_OCDL m5 : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSC_COVL m5 : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSC_PTO m5 : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SSC_HWDF m5 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAA_SCD m8 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAA_OCD2 m8 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAA_OCD1 m8 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAA_OCC m8 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAA_COV m8 : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAA_CUV m8 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAB_OTF m8 : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAB_OTINT m8 : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAB_OTD m8 : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAB_OTC m8 : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAB_UTINT m8 : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAB_UTD m8 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAB_UTC m8 : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAC_OCD3 m8 : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAC_SCDL m8 : 30|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAC_OCDL m8 : 29|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAC_COVL m8 : 28|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ SAC_PTOS m8 : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_SSBC m10 : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_SSA m10 : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_PF m10 : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_MSK_SFALERT m10 : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_MSK_PFALERT m10 : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_INITSTART m10 : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_INITCOMP m10 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_XCHG m10 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_XDSG m10 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_SHUTV m10 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_FUSE m10 : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_CB m10 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ ALARM_WAKE m10 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ FETSTAT_ALRT_PIN m9 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ FETSTAT_DDSG_PIN m9 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ FETSTAT_DCHG_PIN m9 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ FETSTAT_PDSG_FET m9 : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ FETSTAT_DSG_FET m9 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ FETSTAT_PCHG_FET m9 : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ FETSTAT_CHG_FET m9 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ CTLSTAT_DEEPSLEEP m9 : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ CTLSTAT_LD_TIMEOUT m9 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ CTLSTAT_LD_ON m9 : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_SLEEP m9 : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_SD_CMD m9 : 45|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_PF m9 : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_SS m9 : 43|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_FUSE m9 : 42|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_SEC1 m9 : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_SEC0 m9 : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_OTPB m9 : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_OTPW m9 : 38|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_COW_CHK m9 : 37|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_WD m9 : 36|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_POR m9 : 35|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_SLEEP_EN m9 : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_PCHG_MODE m9 : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+   SG_ BATSTAT_CFGUPDATE m9 : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BA_DEF_ BO_ "VFrameFormat" ENUM "StandardCAN","ExtendedCAN","reserved","J1939PG","";
+BA_DEF_ BO_ "GenMsgBackgroundColor" STRING ;
+BA_DEF_ BO_ "GenMsgForegroundColor" STRING ;
+BA_DEF_ BO_ "matchingcriteria" INT 0 0;
+BA_DEF_ BO_ "filterlabeling" INT 0 0;
+BA_DEF_DEF_ "GenMsgBackgroundColor" "#ffffff";
+BA_DEF_DEF_ "GenMsgForegroundColor" "#000000";
+BA_DEF_DEF_ "matchingcriteria" 0;
+BA_DEF_DEF_ "filterlabeling" 0;
+BA_ "GenMsgForegroundColor" BO_ 2024 "#000000";
+BA_ "GenMsgForegroundColor" BO_ 488 "#ff0000";
+SG_MUL_VAL_ 2024 offset zid 1-1;
+SG_MUL_VAL_ 2024 T_fullscan_cuv_cov zid 1-1;
+SG_MUL_VAL_ 2024 cv1 offset 0-0;
+SG_MUL_VAL_ 2024 cv2 offset 0-0;
+SG_MUL_VAL_ 2024 cv3 offset 0-0;
+SG_MUL_VAL_ 2024 cv4 offset 3-3;
+SG_MUL_VAL_ 2024 cv5 offset 3-3;
+SG_MUL_VAL_ 2024 cv6 offset 3-3;
+SG_MUL_VAL_ 2024 cv7 offset 6-6;
+SG_MUL_VAL_ 2024 cv8 offset 6-6;
+SG_MUL_VAL_ 2024 cv9 offset 6-6;
+SG_MUL_VAL_ 2024 cv10 offset 9-9;
+SG_MUL_VAL_ 2024 cv11 offset 9-9;
+SG_MUL_VAL_ 2024 cv12 offset 9-9;
+SG_MUL_VAL_ 2024 cv13 offset 12-12;
+SG_MUL_VAL_ 2024 cv14 offset 12-12;
+SG_MUL_VAL_ 2024 cv15 offset 12-12;
+SG_MUL_VAL_ 2024 cv16 offset 15-15;
+SG_MUL_VAL_ 2024 CC2_current offset 15-15;
+SG_MUL_VAL_ 2024 cb_offset zid 12-12;
+SG_MUL_VAL_ 2024 cb_1 cb_offset 0-0;
+SG_MUL_VAL_ 2024 cb_2 cb_offset 1-1;
+SG_MUL_VAL_ 2024 cb_3 cb_offset 2-2;
+SG_MUL_VAL_ 2024 cb_4 cb_offset 3-3;
+SG_MUL_VAL_ 2024 cb_5 cb_offset 4-4;
+SG_MUL_VAL_ 2024 cb_6 cb_offset 5-5;
+SG_MUL_VAL_ 2024 cb_7 cb_offset 6-6;
+SG_MUL_VAL_ 2024 cb_8 cb_offset 7-7;
+SG_MUL_VAL_ 2024 cb_9 cb_offset 8-8;
+SG_MUL_VAL_ 2024 cb_10 cb_offset 9-9;
+SG_MUL_VAL_ 2024 cb_11 cb_offset 10-10;
+SG_MUL_VAL_ 2024 cb_12 cb_offset 11-11;
+SG_MUL_VAL_ 2024 cb_13 cb_offset 12-12;
+SG_MUL_VAL_ 2024 cb_14 cb_offset 13-13;
+SG_MUL_VAL_ 2024 cb_15 cb_offset 14-14;
+SG_MUL_VAL_ 2024 cb_16 cb_offset 15-15;
+SG_MUL_VAL_ 2024 cb_present_time zid 11-11;
+SG_MUL_VAL_ 2024 c_1_active zid 11-11;
+SG_MUL_VAL_ 2024 c_2_active zid 11-11;
+SG_MUL_VAL_ 2024 c_3_active zid 11-11;
+SG_MUL_VAL_ 2024 c_4_active zid 11-11;
+SG_MUL_VAL_ 2024 c_5_active zid 11-11;
+SG_MUL_VAL_ 2024 c_6_active zid 11-11;
+SG_MUL_VAL_ 2024 c_7_active zid 11-11;
+SG_MUL_VAL_ 2024 c_8_active zid 11-11;
+SG_MUL_VAL_ 2024 c_9_active zid 11-11;
+SG_MUL_VAL_ 2024 c_10_active zid 11-11;
+SG_MUL_VAL_ 2024 c_11_active zid 11-11;
+SG_MUL_VAL_ 2024 c_12_active zid 11-11;
+SG_MUL_VAL_ 2024 c_13_active zid 11-11;
+SG_MUL_VAL_ 2024 c_14_active zid 11-11;
+SG_MUL_VAL_ 2024 c_15_active zid 11-11;
+SG_MUL_VAL_ 2024 c_16_active zid 11-11;
+SG_MUL_VAL_ 2024 stack_voltage zid 2-2;
+SG_MUL_VAL_ 2024 pack_pin_voltage zid 2-2;
+SG_MUL_VAL_ 2024 ld_pin_voltage zid 2-2;
+SG_MUL_VAL_ 2024 ts1 zid 3-3;
+SG_MUL_VAL_ 2024 ts3 zid 3-3;
+SG_MUL_VAL_ 2024 tint zid 3-3;
+SG_MUL_VAL_ 2024 SSA_SCD zid 4-4;
+SG_MUL_VAL_ 2024 SSA_OCD2 zid 4-4;
+SG_MUL_VAL_ 2024 SSA_OCD1 zid 4-4;
+SG_MUL_VAL_ 2024 SSA_OCC zid 4-4;
+SG_MUL_VAL_ 2024 SSA_COV zid 4-4;
+SG_MUL_VAL_ 2024 SSA_CUV zid 4-4;
+SG_MUL_VAL_ 2024 SSB_OTF zid 5-5;
+SG_MUL_VAL_ 2024 SSB_OTINT zid 5-5;
+SG_MUL_VAL_ 2024 SSB_OTD zid 5-5;
+SG_MUL_VAL_ 2024 SSB_OTC zid 5-5;
+SG_MUL_VAL_ 2024 SSB_UTINT zid 5-5;
+SG_MUL_VAL_ 2024 SSB_UTD zid 5-5;
+SG_MUL_VAL_ 2024 SSB_UTC zid 5-5;
+SG_MUL_VAL_ 2024 SSC_OCD3 zid 5-5;
+SG_MUL_VAL_ 2024 SSC_SCDL zid 5-5;
+SG_MUL_VAL_ 2024 SSC_OCDL zid 5-5;
+SG_MUL_VAL_ 2024 SSC_COVL zid 5-5;
+SG_MUL_VAL_ 2024 SSC_PTO zid 5-5;
+SG_MUL_VAL_ 2024 SSC_HWDF zid 5-5;
+SG_MUL_VAL_ 2024 SAA_SCD zid 8-8;
+SG_MUL_VAL_ 2024 SAA_OCD2 zid 8-8;
+SG_MUL_VAL_ 2024 SAA_OCD1 zid 8-8;
+SG_MUL_VAL_ 2024 SAA_OCC zid 8-8;
+SG_MUL_VAL_ 2024 SAA_COV zid 8-8;
+SG_MUL_VAL_ 2024 SAA_CUV zid 8-8;
+SG_MUL_VAL_ 2024 SAB_OTF zid 8-8;
+SG_MUL_VAL_ 2024 SAB_OTINT zid 8-8;
+SG_MUL_VAL_ 2024 SAB_OTD zid 8-8;
+SG_MUL_VAL_ 2024 SAB_OTC zid 8-8;
+SG_MUL_VAL_ 2024 SAB_UTINT zid 8-8;
+SG_MUL_VAL_ 2024 SAB_UTD zid 8-8;
+SG_MUL_VAL_ 2024 SAB_UTC zid 8-8;
+SG_MUL_VAL_ 2024 SAC_OCD3 zid 8-8;
+SG_MUL_VAL_ 2024 SAC_SCDL zid 8-8;
+SG_MUL_VAL_ 2024 SAC_OCDL zid 8-8;
+SG_MUL_VAL_ 2024 SAC_COVL zid 8-8;
+SG_MUL_VAL_ 2024 SAC_PTOS zid 8-8;
+SG_MUL_VAL_ 2024 ALARM_SSBC zid 10-10;
+SG_MUL_VAL_ 2024 ALARM_SSA zid 10-10;
+SG_MUL_VAL_ 2024 ALARM_PF zid 10-10;
+SG_MUL_VAL_ 2024 ALARM_MSK_SFALERT zid 10-10;
+SG_MUL_VAL_ 2024 ALARM_MSK_PFALERT zid 10-10;
+SG_MUL_VAL_ 2024 ALARM_INITSTART zid 10-10;
+SG_MUL_VAL_ 2024 ALARM_INITCOMP zid 10-10;
+SG_MUL_VAL_ 2024 ALARM_XCHG zid 10-10;
+SG_MUL_VAL_ 2024 ALARM_XDSG zid 10-10;
+SG_MUL_VAL_ 2024 ALARM_SHUTV zid 10-10;
+SG_MUL_VAL_ 2024 ALARM_FUSE zid 10-10;
+SG_MUL_VAL_ 2024 ALARM_CB zid 10-10;
+SG_MUL_VAL_ 2024 ALARM_WAKE zid 10-10;
+SG_MUL_VAL_ 2024 FETSTAT_ALRT_PIN zid 9-9;
+SG_MUL_VAL_ 2024 FETSTAT_DDSG_PIN zid 9-9;
+SG_MUL_VAL_ 2024 FETSTAT_DCHG_PIN zid 9-9;
+SG_MUL_VAL_ 2024 FETSTAT_PDSG_FET zid 9-9;
+SG_MUL_VAL_ 2024 FETSTAT_DSG_FET zid 9-9;
+SG_MUL_VAL_ 2024 FETSTAT_PCHG_FET zid 9-9;
+SG_MUL_VAL_ 2024 FETSTAT_CHG_FET zid 9-9;
+SG_MUL_VAL_ 2024 CTLSTAT_DEEPSLEEP zid 9-9;
+SG_MUL_VAL_ 2024 CTLSTAT_LD_TIMEOUT zid 9-9;
+SG_MUL_VAL_ 2024 CTLSTAT_LD_ON zid 9-9;
+SG_MUL_VAL_ 2024 BATSTAT_SLEEP zid 9-9;
+SG_MUL_VAL_ 2024 BATSTAT_SD_CMD zid 9-9;
+SG_MUL_VAL_ 2024 BATSTAT_PF zid 9-9;
+SG_MUL_VAL_ 2024 BATSTAT_SS zid 9-9;
+SG_MUL_VAL_ 2024 BATSTAT_FUSE zid 9-9;
+SG_MUL_VAL_ 2024 BATSTAT_SEC1 zid 9-9;
+SG_MUL_VAL_ 2024 BATSTAT_SEC0 zid 9-9;
+SG_MUL_VAL_ 2024 BATSTAT_OTPB zid 9-9;
+SG_MUL_VAL_ 2024 BATSTAT_OTPW zid 9-9;
+SG_MUL_VAL_ 2024 BATSTAT_COW_CHK zid 9-9;
+SG_MUL_VAL_ 2024 BATSTAT_WD zid 9-9;
+SG_MUL_VAL_ 2024 BATSTAT_POR zid 9-9;
+SG_MUL_VAL_ 2024 BATSTAT_SLEEP_EN zid 9-9;
+SG_MUL_VAL_ 2024 BATSTAT_PCHG_MODE zid 9-9;
+SG_MUL_VAL_ 2024 BATSTAT_CFGUPDATE zid 9-9;
+SG_MUL_VAL_ 488 offset zid 1-1;
+SG_MUL_VAL_ 488 T_fullscan_cuv_cov zid 1-1;
+SG_MUL_VAL_ 488 cv1 offset 0-0;
+SG_MUL_VAL_ 488 cv2 offset 0-0;
+SG_MUL_VAL_ 488 cv3 offset 0-0;
+SG_MUL_VAL_ 488 cv4 offset 3-3;
+SG_MUL_VAL_ 488 cv5 offset 3-3;
+SG_MUL_VAL_ 488 cv6 offset 3-3;
+SG_MUL_VAL_ 488 cv7 offset 6-6;
+SG_MUL_VAL_ 488 cv8 offset 6-6;
+SG_MUL_VAL_ 488 cv9 offset 6-6;
+SG_MUL_VAL_ 488 cv10 offset 9-9;
+SG_MUL_VAL_ 488 cv11 offset 9-9;
+SG_MUL_VAL_ 488 cv12 offset 9-9;
+SG_MUL_VAL_ 488 cv13 offset 12-12;
+SG_MUL_VAL_ 488 cv14 offset 12-12;
+SG_MUL_VAL_ 488 cv15 offset 12-12;
+SG_MUL_VAL_ 488 cv16 offset 15-15;
+SG_MUL_VAL_ 488 CC2_current zid 15-15;
+SG_MUL_VAL_ 488 SSA_SCD zid 4-4;
+SG_MUL_VAL_ 488 SSA_OCD2 zid 4-4;
+SG_MUL_VAL_ 488 SSA_OCD1 zid 4-4;
+SG_MUL_VAL_ 488 SSA_OCC zid 4-4;
+SG_MUL_VAL_ 488 SSA_COV zid 4-4;
+SG_MUL_VAL_ 488 SSA_CUV zid 4-4;
+SG_MUL_VAL_ 488 SSB_OTF zid 5-5;
+SG_MUL_VAL_ 488 SSB_OTINT zid 5-5;
+SG_MUL_VAL_ 488 SSB_OTD zid 5-5;
+SG_MUL_VAL_ 488 SSB_OTC zid 5-5;
+SG_MUL_VAL_ 488 SSB_UTINT zid 5-5;
+SG_MUL_VAL_ 488 SSB_UTD zid 5-5;
+SG_MUL_VAL_ 488 SSB_UTC zid 5-5;
+SG_MUL_VAL_ 488 SSC_OCD3 zid 5-5;
+SG_MUL_VAL_ 488 SSC_SCDL zid 5-5;
+SG_MUL_VAL_ 488 SSC_OCDL zid 5-5;
+SG_MUL_VAL_ 488 SSC_COVL zid 5-5;
+SG_MUL_VAL_ 488 SSC_PTO zid 5-5;
+SG_MUL_VAL_ 488 SSC_HWDF zid 5-5;
+SG_MUL_VAL_ 488 SAA_SCD zid 8-8;
+SG_MUL_VAL_ 488 SAA_OCD2 zid 8-8;
+SG_MUL_VAL_ 488 SAA_OCD1 zid 8-8;
+SG_MUL_VAL_ 488 SAA_OCC zid 8-8;
+SG_MUL_VAL_ 488 SAA_COV zid 8-8;
+SG_MUL_VAL_ 488 SAA_CUV zid 8-8;
+SG_MUL_VAL_ 488 SAB_OTF zid 8-8;
+SG_MUL_VAL_ 488 SAB_OTINT zid 8-8;
+SG_MUL_VAL_ 488 SAB_OTD zid 8-8;
+SG_MUL_VAL_ 488 SAB_OTC zid 8-8;
+SG_MUL_VAL_ 488 SAB_UTINT zid 8-8;
+SG_MUL_VAL_ 488 SAB_UTD zid 8-8;
+SG_MUL_VAL_ 488 SAB_UTC zid 8-8;
+SG_MUL_VAL_ 488 SAC_OCD3 zid 8-8;
+SG_MUL_VAL_ 488 SAC_SCDL zid 8-8;
+SG_MUL_VAL_ 488 SAC_OCDL zid 8-8;
+SG_MUL_VAL_ 488 SAC_COVL zid 8-8;
+SG_MUL_VAL_ 488 SAC_PTOS zid 8-8;
+SG_MUL_VAL_ 488 ALARM_SSBC zid 10-10;
+SG_MUL_VAL_ 488 ALARM_SSA zid 10-10;
+SG_MUL_VAL_ 488 ALARM_PF zid 10-10;
+SG_MUL_VAL_ 488 ALARM_MSK_SFALERT zid 10-10;
+SG_MUL_VAL_ 488 ALARM_MSK_PFALERT zid 10-10;
+SG_MUL_VAL_ 488 ALARM_INITSTART zid 10-10;
+SG_MUL_VAL_ 488 ALARM_INITCOMP zid 10-10;
+SG_MUL_VAL_ 488 ALARM_XCHG zid 10-10;
+SG_MUL_VAL_ 488 ALARM_XDSG zid 10-10;
+SG_MUL_VAL_ 488 ALARM_SHUTV zid 10-10;
+SG_MUL_VAL_ 488 ALARM_FUSE zid 10-10;
+SG_MUL_VAL_ 488 ALARM_CB zid 10-10;
+SG_MUL_VAL_ 488 ALARM_WAKE zid 10-10;
+SG_MUL_VAL_ 488 FETSTAT_ALRT_PIN zid 9-9;
+SG_MUL_VAL_ 488 FETSTAT_DDSG_PIN zid 9-9;
+SG_MUL_VAL_ 488 FETSTAT_DCHG_PIN zid 9-9;
+SG_MUL_VAL_ 488 FETSTAT_PDSG_FET zid 9-9;
+SG_MUL_VAL_ 488 FETSTAT_DSG_FET zid 9-9;
+SG_MUL_VAL_ 488 FETSTAT_PCHG_FET zid 9-9;
+SG_MUL_VAL_ 488 FETSTAT_CHG_FET zid 9-9;
+SG_MUL_VAL_ 488 CTLSTAT_DEEPSLEEP zid 9-9;
+SG_MUL_VAL_ 488 CTLSTAT_LD_TIMEOUT zid 9-9;
+SG_MUL_VAL_ 488 CTLSTAT_LD_ON zid 9-9;
+SG_MUL_VAL_ 488 BATSTAT_SLEEP zid 9-9;
+SG_MUL_VAL_ 488 BATSTAT_SD_CMD zid 9-9;
+SG_MUL_VAL_ 488 BATSTAT_PF zid 9-9;
+SG_MUL_VAL_ 488 BATSTAT_SS zid 9-9;
+SG_MUL_VAL_ 488 BATSTAT_FUSE zid 9-9;
+SG_MUL_VAL_ 488 BATSTAT_SEC1 zid 9-9;
+SG_MUL_VAL_ 488 BATSTAT_SEC0 zid 9-9;
+SG_MUL_VAL_ 488 BATSTAT_OTPB zid 9-9;
+SG_MUL_VAL_ 488 BATSTAT_OTPW zid 9-9;
+SG_MUL_VAL_ 488 BATSTAT_COW_CHK zid 9-9;
+SG_MUL_VAL_ 488 BATSTAT_WD zid 9-9;
+SG_MUL_VAL_ 488 BATSTAT_POR zid 9-9;
+SG_MUL_VAL_ 488 BATSTAT_SLEEP_EN zid 9-9;
+SG_MUL_VAL_ 488 BATSTAT_PCHG_MODE zid 9-9;
+SG_MUL_VAL_ 488 BATSTAT_CFGUPDATE zid 9-9;

@@ -1,0 +1,273 @@
+Class,Subclass,Address,Name,LibName,Type,Min Value,Max Value,Default,Units
+Calibration,Voltage,0x9180,Cell 1 Gain,Cell1Gain,I2,-32767,32767,0,—
+Calibration,Voltage,0x9182,Cell 2 Gain,Cell2Gain,I2,-32767,32767,0,—
+Calibration,Voltage,0x9184,Cell 3 Gain,Cell3Gain,I2,-32767,32767,0,—
+Calibration,Voltage,0x9186,Cell 4 Gain,Cell4Gain,I2,-32767,32767,0,—
+Calibration,Voltage,0x9188,Cell 5 Gain,Cell5Gain,I2,-32767,32767,0,—
+Calibration,Voltage,0x918A,Cell 6 Gain,Cell6Gain,I2,-32767,32767,0,—
+Calibration,Voltage,0x918C,Cell 7 Gain,Cell7Gain,I2,-32767,32767,0,—
+Calibration,Voltage,0x918E,Cell 8 Gain,Cell8Gain,I2,-32767,32767,0,—
+Calibration,Voltage,0x9190,Cell 9 Gain,Cell9Gain,I2,-32767,32767,0,—
+Calibration,Voltage,0x9192,Cell 10 Gain,Cell10Gain,I2,-32767,32767,0,—
+Calibration,Voltage,0x9194,Cell 11 Gain,Cell11Gain,I2,-32767,32767,0,—
+Calibration,Voltage,0x9196,Cell 12 Gain,Cell12Gain,I2,-32767,32767,0,—
+Calibration,Voltage,0x9198,Cell 13 Gain,Cell13Gain,I2,-32767,32767,0,—
+Calibration,Voltage,0x919A,Cell 14 Gain,Cell14Gain,I2,-32767,32767,0,—
+Calibration,Voltage,0x919C,Cell 15 Gain,Cell15Gain,I2,-32767,32767,0,—
+Calibration,Voltage,0x919E,Cell 16 Gain,Cell16Gain,I2,-32767,32767,0,—
+Calibration,Voltage,0x91A0,Pack Gain,PackGain,U2,0,65535,0,—
+Calibration,Voltage,0x91A2,TOS Gain,TOSGain,U2,0,65535,0,—
+Calibration,Voltage,0x91A4,LD Gain,LDGain,U2,0,65535,0,—
+Calibration,Voltage,0x91A6,ADC Gain,ADCGain,I2,-32767,32767,0,—
+Calibration,Current,0x91A8,CC Gain,CCGain,F4,1.00E-02,10.00E+02,7.4768,—
+Calibration,Current,0x91AC,Capacity Gain,CapacityGain,F4,2.98262E+03,4.193046E+08,2230042.463,—
+Calibration,Vcell Offset,0x91B0,Vcell Offset,VcellOffset,I2,-32767,32767,0,mV
+Calibration,V Divider Offset,0x91B2,Vdiv Offset,VdivOffset,I2,-32767,32767,0,userV
+Calibration,Current Offset,0x91C6,Coulomb Counter Offset Samples,CoulombCounterOffsetSamples,U2,0,65535,64,—
+Calibration,Current Offset,0x91C8,Board Offset,BoardOffset,I2,-32768,32767,0,—
+Calibration,Temperature,0x91CA,Internal Temp Offset,InternalTempOffset,I1,-128,127,0,0.1°C
+Calibration,Temperature,0x91CB,CFETOFF Temp Offset,CFETOFFTempOffset,I1,-128,127,0,0.1°C
+Calibration,Temperature,0x91CC,DFETOFF Temp Offset,DFETOFFTempOffset,I1,-128,127,0,0.1°C
+Calibration,Temperature,0x91CD,ALERT Temp Offset,ALERTTempOffset,I1,-128,127,0,0.1°C
+Calibration,Temperature,0x91CE,TS1 Temp Offset,TS1TempOffset,I1,-128,127,0,0.1°C
+Calibration,Temperature,0x91CF,TS2 Temp Offset,TS2TempOffset,I1,-128,127,0,0.1°C
+Calibration,Temperature,0x91D0,TS3 Temp Offset,TS3TempOffset,I1,-128,127,0,0.1°C
+Calibration,Temperature,0x91D1,HDQ Temp Offset,HDQTempOffset,I1,-128,127,0,0.1°C
+Calibration,Temperature,0x91D2,DCHG Temp Offset,DCHGTempOffset,I1,-128,127,0,0.1°C
+Calibration,Temperature,0x91D3,DDSG Temp Offset,DDSGTempOffset,I1,-128,127,0,0.1°C
+Calibration,Internal Temp Model,0x91E2,Int Gain,IntGain,I2,-32768,32767,25390,—
+Calibration,Internal Temp Model,0x91E4,Int base offset,Intbaseoffset,I2,-32768,32767,3032,—
+Calibration,Internal Temp Model,0x91E6,Int Maximum AD,IntMaximumAD,I2,-32768,32767,16383,—
+Calibration,Internal Temp Model,0x91E8,Int Maximum Temp,IntMaximumTemp,I2,0,32767,6379,0.1K
+Calibration,18K Temperature Model,0x91EA,Coeff a1,T18kCoeffa1,I2,-32768,32767,-15524,—
+Calibration,18K Temperature Model,0x91EC,Coeff a2,T18kCoeffa2,I2,-32768,32767,26423,—
+Calibration,18K Temperature Model,0x91EE,Coeff a3,T18kCoeffa3,I2,-32768,32767,-22664,—
+Calibration,18K Temperature Model,0x91F0,Coeff a4,T18kCoeffa4,I2,-32768,32767,28834,—
+Calibration,18K Temperature Model,0x91F2,Coeff a5,T18kCoeffa5,I2,-32768,32767,672,—
+Calibration,18K Temperature Model,0x91F4,Coeff b1,T18kCoeffb1,I2,-32768,32767,-371,—
+Calibration,18K Temperature Model,0x91F6,Coeff b2,T18kCoeffb2,I2,-32768,32767,708,—
+Calibration,18K Temperature Model,0x91F8,Coeff b3,T18kCoeffb3,I2,-32768,32767,-3498,—
+Calibration,18K Temperature Model,0x91FA,Coeff b4,T18kCoeffb4,I2,-32768,32767,5051,—
+Calibration,18K Temperature Model,0x91FE,Adc0,T18kAdc0,I2,-32768,32767,11703,—
+Calibration,180K Temperature Model,0x9200,Coeff a1,T180kCoeffa1,I2,-32768,32767,-17513,—
+Calibration,180K Temperature Model,0x9202,Coeff a2,T180kCoeffa2,I2,-32768,32767,25759,—
+Calibration,180K Temperature Model,0x9204,Coeff a3,T180kCoeffa3,I2,-32768,32767,-23593,—
+Calibration,180K Temperature Model,0x9206,Coeff a4,T180kCoeffa4,I2,-32768,32767,32175,—
+Calibration,180K Temperature Model,0x9208,Coeff a5,T180kCoeffa5,I2,-32768,32767,2090,—
+Calibration,180K Temperature Model,0x920A,Coeff b1,T180kCoeffb1,I2,-32768,32767,-2055,—
+Calibration,180K Temperature Model,0x920C,Coeff b2,T180kCoeffb2,I2,-32768,32767,2955,—
+Calibration,180K Temperature Model,0x920E,Coeff b3,T180kCoeffb3,I2,-32768,32767,-3427,—
+Calibration,180K Temperature Model,0x9210,Coeff b4,T180kCoeffb4,I2,-32768,32767,4385,—
+Calibration,180K Temperature Model,0x9214,Adc0,T180kAdc0,I2,-32768,32767,17246,—
+Calibration,Custom Temperature Model,0x9216,Coeff a1,CustomCoeffa1,I2,-32768,32767,0,—
+Calibration,Custom Temperature Model,0x9218,Coeff a2,CustomCoeffa2,I2,-32768,32767,0,—
+Calibration,Custom Temperature Model,0x921A,Coeff a3,CustomCoeffa3,I2,-32768,32767,0,—
+Calibration,Custom Temperature Model,0x921C,Coeff a4,CustomCoeffa4,I2,-32768,32767,0,—
+Calibration,Custom Temperature Model,0x921E,Coeff a5,CustomCoeffa5,I2,-32768,32767,0,—
+Calibration,Custom Temperature Model,0x9220,Coeff b1,CustomCoeffb1,I2,-32768,32767,0,—
+Calibration,Custom Temperature Model,0x9222,Coeff b2,CustomCoeffb2,I2,-32768,32767,0,—
+Calibration,Custom Temperature Model,0x9224,Coeff b3,CustomCoeffb3,I2,-32768,32767,0,—
+Calibration,Custom Temperature Model,0x9226,Coeff b4,CustomCoeffb4,I2,-32768,32767,0,—
+Calibration,Custom Temperature Model,0x9228,Rc0,CustomRc0,I2,-32768,32767,0,—
+Calibration,Custom Temperature Model,0x922A,Adc0,CustomAdc0,I2,-32768,32767,0,—
+Calibration,Current Deadband,0x922D,Coulomb Counter Deadband,CoulombCounterDeadband,U1,0,255,9,234nV
+Calibration,CUV,0x91D4,CUV Threshold Override,CUVThresholdOverride,U2,0x0000,0xFFFF,0xFFFF,Hex
+Calibration,COV,0x91D6,COV Threshold Override,COVThresholdOverride,U2,0x0000,0xFFFF,0xFFFF,Hex
+Settings,Fuse,0x9231,Min Blow Fuse Voltage,MinBlowFuseVoltage,I2,0,32767,500,10mV
+Settings,Fuse,0x9233,Fuse Blow Timeout,FuseBlowTimeout,U1,0,255,30,s
+Settings,Configuration,0x9234,Power Config,PowerConfig,H2,0x0000,0xFFFF,0x2982,Hex
+Settings,Configuration,0x9236,REG12 Config,REG12Config,H1,0x00,0xFF,0x00,Hex
+Settings,Configuration,0x9237,REG0 Config,REG0Config,H1,0x00,0x03,0x00,Hex
+Settings,Configuration,0x9238,HWD Regulator Options,HWDRegulatorOptions,H1,0x00,0xFF,0x00,Hex
+Settings,Configuration,0x9239,Comm Type,CommType,U1,0x00,0x1F,0,—
+Settings,Configuration,0x923A,I2C Address,I2CAddress,U1,0x00,0xFF,0,—
+Settings,Configuration,0x923C,SPI Configuration,SPIConfiguration,H1,0x00,0x7F,0x20,—
+Settings,Configuration,0x923D,Comm Idle Time,CommIdleTime,U1,0,255,0,s
+Settings,Configuration,0x92FA,CFETOFF Pin Config,CFETOFFPinConfig,H1,0x00,0xFF,0x00,Hex
+Settings,Configuration,0x92FB,DFETOFF Pin Config,DFETOFFPinConfig,H1,0x00,0xFF,0x00,Hex
+Settings,Configuration,0x92FC,ALERT Pin Config,ALERTPinConfig,H1,0x00,0xFF,0x00,Hex
+Settings,Configuration,0x92FD,TS1 Config,TS1Config,H1,0x00,0xFF,0x07,Hex
+Settings,Configuration,0x92FE,TS2 Config,TS2Config,H1,0x00,0xFF,0x00,Hex
+Settings,Configuration,0x92FF,TS3 Config,TS3Config,H1,0x00,0xFF,0x00,Hex
+Settings,Configuration,0x9300,HDQ Pin Config,HDQPinConfig,H1,0x00,0xFF,0x00,Hex
+Settings,Configuration,0x9301,DCHG Pin Config,DCHGPinConfig,H1,0x00,0xFF,0x00,Hex
+Settings,Configuration,0x9302,DDSG Pin Config,DDSGPinConfig,H1,0x00,0xFF,0x00,Hex
+Settings,Configuration,0x9303,DA Configuration,DAConfiguration,H1,0x00,0xFF,0x05,Hex
+Settings,Configuration,0x9304,Vcell Mode,VCellMode,H2,0x0000,0xFFFF,0x0000,Hex
+Settings,Configuration,0x9307,CC3 Samples,CC3Samples,U1,2,255,80,Num
+Settings,Protection,0x925F,Protection Configuration,ProtectionConfiguration,H2,0x0000,0x07FF,0x0002,Hex
+Settings,Protection,0x9261,Enabled Protections A,EnabledProtectionsA,U1,0x00,0xFF,0x88,Hex
+Settings,Protection,0x9262,Enabled Protections B,EnabledProtectionsB,U1,0x00,0xFF,0x00,Hex
+Settings,Protection,0x9263,Enabled Protections C,EnabledProtectionsC,U1,0x00,0xFF,0x00,Hex
+Settings,Protection,0x9265,CHG FET Protections A,CHGFETProtectionsA,U1,0x00,0xFF,0x98,Hex
+Settings,Protection,0x9266,CHG FET Protections B,CHGFETProtectionsB,U1,0x00,0xFF,0xD5,Hex
+Settings,Protection,0x9267,CHG FET Protections C,CHGFETProtectionsC,U1,0x00,0xFF,0x56,Hex
+Settings,Protection,0x9269,DSG FET Protections A,DSGFETProtectionsA,U1,0x00,0xFF,0xE4,Hex
+Settings,Protection,0x926A,DSG FET Protections B,DSGFETProtectionsB,U1,0x00,0xFF,0xE6,Hex
+Settings,Protection,0x926B,DSG FET Protections C,DSGFETProtectionsC,U1,0x00,0xFF,0xE2,Hex
+Settings,Protection,0x9273,Body Diode Threshold,BodyDiodeThreshold,I2,0,32767,50,mA
+Settings,Alarm,0x926D,Default Alarm Mask,DefaultAlarmMask,H2,0x0000,0xFFFF,0xF800,Hex
+Settings,Alarm,0x926F,SF Alert Mask A,SFAlertMaskA,U1,0x00,0xFF,0xFC,Hex
+Settings,Alarm,0x9270,SF Alert Mask B,SFAlertMaskB,U1,0x00,0xFF,0xF7,Hex
+Settings,Alarm,0x9271,SF Alert Mask C,SFAlertMaskC,U1,0x00,0xFF,0xF4,Hex
+Settings,Alarm,0x92C4,PF Alert Mask A,PFAlertMaskA,U1,0x00,0xFF,0x5F,Hex
+Settings,Alarm,0x92C5,PF Alert Mask B,PFAlertMaskB,U1,0x00,0xFF,0x9F,Hex
+Settings,Alarm,0x92C6,PF Alert Mask C,PFAlertMaskC,U1,0x00,0xFF,0x00,Hex
+Settings,Alarm,0x92C7,PF Alert Mask D,PFAlertMaskD,U1,0x00,0xFF,0x00,Hex
+Settings,Permanent Failure,0x92C0,Enabled PF A,EnabledPFA,U1,0x00,0xFF,0x00,Hex
+Settings,Permanent Failure,0x92C1,Enabled PF B,EnabledPFB,U1,0x00,0xFF,0x00,Hex
+Settings,Permanent Failure,0x92C2,Enabled PF C,EnabledPFC,U1,0x00,0xFF,0x07,Hex
+Settings,Permanent Failure,0x92C3,Enabled PF D,EnabledPFD,U1,0x00,0xFF,0x00,Hex
+Settings,FET,0x9308,FET Options,FETOptions,H1,0x00,0xFF,0x0D,Hex
+Settings,FET,0x9309,Chg Pump Control,ChgPumpControl,U1,0x00,0xFF,0x01,Hex
+Settings,FET,0x930A,Precharge Start Voltage,PrechargeStartVoltage,I2,0,32767,0,mV
+Settings,FET,0x930C,Precharge Stop Voltage,PrechargeStopVoltage,I2,0,32767,0,mV
+Settings,FET,0x930E,Predischarge Timeout,PredischargeTimeout,U1,0,255,5,10ms
+Settings,FET,0x930F,Predischarge Stop Delta,PredischargeStopDelta,U1,0,255,50,10mV
+Settings,Current Thresholds,0x9310,Dsg Current Threshold,DsgCurrentThreshold,I2,0,32767,100,userA
+Settings,Current Thresholds,0x9312,Chg Current Threshold,ChgCurrentThreshold,I2,0,32767,50,userA
+Settings,Cell Open-Wire,0x9314,Check Time,CheckTime,U1,0,255,5,s
+Settings,Interconnect Resistances,0x9315,Cell 1 Interconnect,Cell1Interconnect,I2,0,32767,0,mΩ
+Settings,Interconnect Resistances,0x9317,Cell 2 Interconnect,Cell2Interconnect,I2,0,32767,0,mΩ
+Settings,Interconnect Resistances,0x9319,Cell 3 Interconnect,Cell3Interconnect,I2,0,32767,0,mΩ
+Settings,Interconnect Resistances,0x931B,Cell 4 Interconnect,Cell4Interconnect,I2,0,32767,0,mΩ
+Settings,Interconnect Resistances,0x931D,Cell 5 Interconnect,Cell5Interconnect,I2,0,32767,0,mΩ
+Settings,Interconnect Resistances,0x931F,Cell 6 Interconnect,Cell6Interconnect,I2,0,32767,0,mΩ
+Settings,Interconnect Resistances,0x9321,Cell 7 Interconnect,Cell7Interconnect,I2,0,32767,0,mΩ
+Settings,Interconnect Resistances,0x9323,Cell 8 Interconnect,Cell8Interconnect,I2,0,32767,0,mΩ
+Settings,Interconnect Resistances,0x9325,Cell 9 Interconnect,Cell9Interconnect,I2,0,32767,0,mΩ
+Settings,Interconnect Resistances,0x9327,Cell 10 Interconnect,Cell10Interconnect,I2,0,32767,0,mΩ
+Settings,Interconnect Resistances,0x9329,Cell 11 Interconnect,Cell11Interconnect,I2,0,32767,0,mΩ
+Settings,Interconnect Resistances,0x932B,Cell 12 Interconnect,Cell12Interconnect,I2,0,32767,0,mΩ
+Settings,Interconnect Resistances,0x932D,Cell 13 Interconnect,Cell13Interconnect,I2,0,32767,0,mΩ
+Settings,Interconnect Resistances,0x932F,Cell 14 Interconnect,Cell14Interconnect,I2,0,32767,0,mΩ
+Settings,Interconnect Resistances,0x9331,Cell 15 Interconnect,Cell15Interconnect,I2,0,32767,0,mΩ
+Settings,Interconnect Resistances,0x9333,Cell 16 Interconnect,Cell16Interconnect,I2,0,32767,0,mΩ
+Settings,Manufacturing,0x9343,Mfg Status Init,MfgStatusInit,H2,0x0000,0xFFFF,0x0040,Hex
+Settings,Cell Balancing Config,0x9335,Balancing Configuration,BalancingConfiguration,H1,0x00,0xFF,0x00,Hex
+Settings,Cell Balancing Config,0x9336,Min Cell Temp,MinCellTemp,I1,-128,127,-20,°C
+Settings,Cell Balancing Config,0x9337,Max Cell Temp,MaxCellTemp,I1,-128,127,60,°C
+Settings,Cell Balancing Config,0x9338,Max Internal Temp,MaxInternalTemp,I1,-128,127,70,°C
+Settings,Cell Balancing Config,0x9339,Cell Balance Interval,CellBalanceInterval,U1,1,255,20,s
+Settings,Cell Balancing Config,0x933A,Cell Balance Max Cells,CellBalanceMaxCells,U1,0,16,1,Num
+Settings,Cell Balancing Config,0x933B,Cell Balance Min Cell V (Charge),CellBalanceMinCellVCharge,I2,0,5000,3900,mV
+Settings,Cell Balancing Config,0x933D,Cell Balance Min Delta (Charge),CellBalanceMinDeltaCharge,U1,0,255,40,mV
+Settings,Cell Balancing Config,0x933E,Cell Balance Stop Delta (Charge),CellBalanceStopDeltaCharge,U1,0,255,20,mV
+Settings,Cell Balancing Config,0x933F,Cell Balance Min Cell V (Relax),CellBalanceMinCellVRelax,I2,0,5000,3900,mV
+Settings,Cell Balancing Config,0x9341,Cell Balance Min Delta (Relax),CellBalanceMinDeltaRelax,U1,0,255,40,mV
+Settings,Cell Balancing Config,0x9342,Cell Balance Stop Delta (Relax),CellBalanceStopDeltaRelax,U1,0,255,20,mV
+Power,Shutdown,0x923F,Shutdown Cell Voltage,ShutdownCellVoltage,I2,0,32767,0,mV
+Power,Shutdown,0x9241,Shutdown Stack Voltage,ShutdownStackVoltage,I2,0,32767,600,10mV
+Power,Shutdown,0x9243,Low V Shutdown Delay,LowVShutdownDelay,U1,0,63,1,s
+Power,Shutdown,0x9244,Shutdown Temperature,ShutdownTemperature,U1,0,150,85,°C
+Power,Shutdown,0x9245,Shutdown Temperature Delay,ShutdownTemperatureDelay,U1,0,254,5,s
+Power,Shutdown,0x9252,FET Off Delay,FETOffDelay,U1,0,127,0,0.25s
+Power,Shutdown,0x9253,Shutdown Command Delay,ShutdownCommandDelay,U1,0,254,0,0.25s
+Power,Shutdown,0x9254,Auto Shutdown Time,AutoShutdownTime,U1,0,250,0,min
+Power,Shutdown,0x9255,RAM Fail Shutdown Time,RAMFailShutdownTime,U1,0,255,5,s
+Power,Sleep,0x9248,Sleep Current,SleepCurrent,I2,0,32767,20,mA
+Power,Sleep,0x924A,Voltage Time,VoltageTime,U1,1,255,5,s
+Power,Sleep,0x924B,Wake Comparator Current,WakeComparatorCurrent,I2,500,32767,500,mA
+Power,Sleep,0x924D,Sleep Hysteresis Time,SleepHysteresisTime,U1,0,255,10,s
+Power,Sleep,0x924E,Sleep Charger Voltage Threshold,SleepChargerVoltageThreshold,I2,0,32767,2000,10mV
+Power,Sleep,0x9250,Sleep Charger PACK-TOS Delta,SleepChargerPACKTOSDelta,I2,10,8500,200,10mV
+System Data,Integrity,0x91E0,Config RAM Signature,ConfigRAMSignature,U2,0x0000,0x7FFF,0,Hex
+Protections,CUV,0x9275,Threshold,CUVThreshold,U1,20,90,50,50.6mV
+Protections,CUV,0x9276,Delay,CUVDelay,U2,1,2047,74,3.3,ms
+Protections,CUV,0x927B,Recovery Hysteresis,CUVRecoveryHysteresis,U1,2,20,2,50.6mV
+Protections,COV,0x9278,Threshold,COVThreshold,U1,20,110,86,50.6mV
+Protections,COV,0x9279,Delay,COVDelay,U2,1,2047,74,3.3,ms
+Protections,COV,0x927C,Recovery Hysteresis,COVRecoveryHysteresis,U1,2,20,2,50.6mV
+Protections,COVL,0x927D,Latch Limit,COVLLatchLimit,U1,0,255,0,—
+Protections,COVL,0x927E,Counter Dec Delay,COVLCounterDecDelay,U1,0,255,10,s
+Protections,COVL,0x927F,Recovery Time,COVLRecoveryTime,U1,0,255,15,s
+Protections,OCC,0x9280,Threshold,OCCThreshold,U1,2,62,2,2mV
+Protections,OCC,0x9281,Delay,OCCDelay,U1,1,127,4,3.3,ms
+Protections,OCC,0x9288,Recovery Threshold,OCCRecoveryThreshold,I2,-32768,32767,-200,mA
+Protections,OCC,0x92B0,PACK-TOS Delta,OCCPACKTOSDelta,I2,10,8500,200,10mV
+Protections,OCD1,0x9282,Threshold,OCD1Threshold,U1,2,100,4,2mV
+Protections,OCD1,0x9283,Delay,OCD1Delay,U1,1,127,1,3.3,ms
+Protections,OCD2,0x9284,Threshold,OCD2Threshold,U1,2,100,3,2mV
+Protections,OCD2,0x9285,Delay,OCD2Delay,U1,1,127,7,3.3,ms
+Protections,SCD,0x9286,Threshold,SCDThreshold,U1,0,15,0,—
+Protections,SCD,0x9287,Delay,SCDDelay,U1,1,31,2,15µs
+Protections,SCD,0x9294,Recovery Time,SCDRecoveryTime,U1,0,255,5,s
+Protections,OCD3,0x928A,Threshold,OCD3Threshold,I2,-32768,0,-4000,userA
+Protections,OCD3,0x928C,Delay,OCD3Delay,U1,0,255,2,s
+Protections,OCD,0x928D,Recovery Threshold,OCDRecoveryThreshold,I2,-32768,32767,200,mA
+Protections,OCDL,0x928F,Latch Limit,OCDLLatchLimit,U1,0,255,0,—
+Protections,OCDL,0x9290,Counter Dec Delay,OCDLCounterDecDelay,U1,0,255,10,s
+Protections,OCDL,0x9291,Recovery Time,OCDLRecoveryTime,U1,0,255,15,s
+Protections,OCDL,0x9292,Recovery Threshold,OCDLRecoveryThreshold,I2,-32768,32767,200,mA
+Protections,SCDL,0x9295,Latch Limit,SCDLLatchLimit,U1,0,255,0,—
+Protections,SCDL,0x9296,Counter Dec Delay,SCDLCounterDecDelay,U1,0,255,10,s
+Protections,SCDL,0x9297,Recovery Time,SCDLRecoveryTime,U1,0,255,15,s
+Protections,SCDL,0x9298,Recovery Threshold,SCDLRecoveryThreshold,I2,-32768,32767,200,mA
+Protections,OTC,0x929A,Threshold,OTCThreshold,I1,-40,120,55,°C
+Protections,OTC,0x929B,Delay,OTCDelay,U1,0,255,2,s
+Protections,OTC,0x929C,Recovery,OTCRecovery,I1,-40,120,50,°C
+Protections,OTD,0x929D,Threshold,OTDThreshold,I1,-40,120,60,°C
+Protections,OTD,0x929E,Delay,OTDDelay,U1,0,255,2,s
+Protections,OTD,0x929F,Recovery,OTDRecovery,I1,-40,120,55,°C
+Protections,OTF,0x92A0,Threshold,OTFThreshold,U1,0,150,80,°C
+Protections,OTF,0x92A1,Delay,OTFDelay,U1,0,255,2,s
+Protections,OTF,0x92A2,Recovery,OTFRecovery,U1,0,150,65,°C
+Protections,OTINT,0x92A3,Threshold,OTINTThreshold,I1,-40,120,85,°C
+Protections,OTINT,0x92A4,Delay,OTINTDelay,U1,0,255,2,s
+Protections,OTINT,0x92A5,Recovery,OTINTRecovery,I1,-40,120,80,°C
+Protections,UTC,0x92A6,Threshold,UTCThreshold,I1,-40,120,0,°C
+Protections,UTC,0x92A7,Delay,UTCDelay,U1,0,255,2,s
+Protections,UTC,0x92A8,Recovery,UTCRecovery,I1,-40,120,5,°C
+Protections,UTD,0x92A9,Threshold,UTDThreshold,I1,-40,120,0,°C
+Protections,UTD,0x92AA,Delay,UTDDelay,U1,0,255,2,s
+Protections,UTD,0x92AB,Recovery,UTDRecovery,I1,-40,120,5,°C
+Protections,UTINT,0x92AC,Threshold,UTINTThreshold,I1,-40,120,-20,°C
+Protections,UTINT,0x92AD,Delay,UTINTDelay,U1,0,255,2,s
+Protections,UTINT,0x92AE,Recovery,UTINTRecovery,I1,-40,120,-15,°C
+Protections,Recovery,0x92AF,Time,ProtectionsRecoveryTime,U1,0,255,3,s
+Protections,HWD,0x92B2,Delay,HWDDelay,U2,0,65535,60,s
+Protections,Load Detect,0x92B4,Active Time,LoadDetectActiveTime,U1,0,255,0,s
+Protections,Load Detect,0x92B5,Retry Delay,LoadDetectRetryDelay,U1,0,255,50,s
+Protections,Load Detect,0x92B6,Timeout,LoadDetectTimeout,U2,0,65535,1,hrs
+Protections,PTO,0x92BA,Charge Threshold,PTOChargeThreshold,I2,-32768,32767,250,mA
+Protections,PTO,0x92BC,Delay,PTODelay,U2,0,65535,1800,s
+Protections,PTO,0x92BE,Reset,PTOReset,I2,0,10000,2,userAh
+Permanent Fail,CUDEP,0x92C8,Threshold,CUDEPThreshold,I2,0,32767,1500,mV
+Permanent Fail,CUDEP,0x92CA,Delay,CUDEPDelay,U1,0,255,2,s
+Permanent Fail,SUV,0x92CB,Threshold,SUVThreshold,I2,0,32767,2200,mV
+Permanent Fail,SUV,0x92CD,Delay,SUVDelay,U1,0,255,5,s
+Permanent Fail,SOV,0x92CE,Threshold,SOVThreshold,I2,0,32767,4500,mV
+Permanent Fail,SOV,0x92D0,Delay,SOVDelay,U1,0,255,5,s
+Permanent Fail,TOS,0x92D1,Threshold,TOSSThreshold,I2,0,32767,500,mV
+Permanent Fail,TOS,0x92D3,Delay,TOSSDelay,U1,0,255,5,s
+Permanent Fail,SOCC,0x92D4,Threshold,SOCCThreshold,I2,-32768,32767,10000,userA
+Permanent Fail,SOCC,0x92D6,Delay,SOCCDelay,U1,0,255,5,s
+Permanent Fail,SOCD,0x92D7,Threshold,SOCDThreshold,I2,-32768,32767,-32000,userA
+Permanent Fail,SOCD,0x92D9,Delay,SOCDDelay,U1,0,255,5,s
+Permanent Fail,SOT,0x92DA,Threshold,SOTThreshold,I1,-40,120,65,°C
+Permanent Fail,SOT,0x92DB,Delay,SOTDelay,U1,0,255,5,s
+Permanent Fail,SOTF,0x92DC,Threshold,SOTFThreshold,U1,0,150,85,°C
+Permanent Fail,SOTF,0x92DD,Delay,SOTFDelay,U1,0,255,5,s
+Permanent Fail,VIMR,0x92DE,Check Voltage,VIMRCheckVoltage,I2,0,5500,3500,mV
+Permanent Fail,VIMR,0x92E0,Max Relax Current,VIMRMaxRelaxCurrent,I2,10,32767,10,mA
+Permanent Fail,VIMR,0x92E2,Threshold,VIMRThreshold,I2,0,5500,500,mV
+Permanent Fail,VIMR,0x92E4,Delay,VIMRDelay,U1,0,255,5,s
+Permanent Fail,VIMR,0x92E5,Relax Min Duration,VIMRRelaxMinDuration,U2,0,65535,100,s
+Permanent Fail,VIMA,0x92E7,Check Voltage,VIMACheckVoltage,I2,0,5500,3700,mV
+Permanent Fail,VIMA,0x92E9,Min Active Current,VIMAMinActiveCurrent,I2,10,32767,50,mA
+Permanent Fail,VIMA,0x92EB,Threshold,VIMAThreshold,I2,0,5500,200,mV
+Permanent Fail,VIMA,0x92ED,Delay,VIMADelay,U1,0,255,5,s
+Permanent Fail,CFETF,0x92EE,OFF Threshold,CFETFOFFThreshold,I2,10,5000,20,mA
+Permanent Fail,CFETF,0x92F0,OFF Delay,CFETFOFFDelay,U1,0,255,5,s
+Permanent Fail,DFETF,0x92F1,OFF Threshold,DFETFOFFThreshold,I2,-5000,-10,-20,mA
+Permanent Fail,DFETF,0x92F3,OFF Delay,DFETFOFFDelay,U1,0,255,5,s
+Permanent Fail,VSSF,0x92F4,Fail Threshold,VSSFFailThreshold,I2,1,32767,100,—
+Permanent Fail,VSSF,0x92F6,Delay,VSSFDelay,U1,0,255,5,s
+Permanent Fail,2LVL,0x92F7,Delay,PF2LVLDelay,U1,0,255,5,s
+Permanent Fail,LFOF,0x92F8,Delay,LFOFDelay,U1,0,255,5,s
+Permanent Fail,HWMX,0x92F9,Delay,HWMXDelay,U1,0,255,5,s
+Security,Settings,0x9256,Security Settings,SecuritySettings,H1,0x00,0x07,0x00,Hex
+Security,Keys,0x9257,Unseal Key Step 1,UnsealKeyStep1,U2,0x0100,0xFFFF,0x0414,Hex
+Security,Keys,0x9259,Unseal Key Step 2,UnsealKeyStep2,U2,0x0100,0xFFFF,0x3672,Hex
+Security,Keys,0x925B,Full Access Key Step 1,FullAccessKeyStep1,U2,0x0100,0xFFFF,0xFFFF,Hex
+Security,Keys,0x925D,Full Access Key Step 2,FullAccessKeyStep2,U2,0x0100,0xFFFF,0xFFFF,Hex
