@@ -58,7 +58,6 @@
 extern FDCAN_HandleTypeDef hfdcan2;
 extern DMA_HandleTypeDef hdma_lpuart1_tx;
 extern UART_HandleTypeDef hlpuart1;
-extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim6;
 extern TIM_HandleTypeDef htim7;
 extern TIM_HandleTypeDef htim16;
@@ -175,20 +174,6 @@ void DMA1_Channel1_IRQHandler(void)
 }
 
 /**
-  * @brief This function handles TIM2 global interrupt.
-  */
-void TIM2_IRQHandler(void)
-{
-  /* USER CODE BEGIN TIM2_IRQn 0 */
-
-  /* USER CODE END TIM2_IRQn 0 */
-  HAL_TIM_IRQHandler(&htim2);
-  /* USER CODE BEGIN TIM2_IRQn 1 */
-
-  /* USER CODE END TIM2_IRQn 1 */
-}
-
-/**
   * @brief This function handles TIM6, DAC and LPTIM1 global Interrupts.
   */
 void TIM6_DAC_LPTIM1_IRQHandler(void)
@@ -228,20 +213,6 @@ void TIM16_FDCAN_IT0_IRQHandler(void)
   /* USER CODE BEGIN TIM16_FDCAN_IT0_IRQn 1 */
 
   /* USER CODE END TIM16_FDCAN_IT0_IRQn 1 */
-}
-
-/**
-  * @brief This function handles TIM17, FDCAN1_IT1 and FDCAN2_IT1 Interrupt.
-  */
-void TIM17_FDCAN_IT1_IRQHandler(void)
-{
-  /* USER CODE BEGIN TIM17_FDCAN_IT1_IRQn 0 */
-
-  /* USER CODE END TIM17_FDCAN_IT1_IRQn 0 */
-  HAL_FDCAN_IRQHandler(&hfdcan2);
-  /* USER CODE BEGIN TIM17_FDCAN_IT1_IRQn 1 */
-
-  /* USER CODE END TIM17_FDCAN_IT1_IRQn 1 */
 }
 
 /**

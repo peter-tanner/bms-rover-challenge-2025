@@ -20,8 +20,8 @@ extern TIM_HandleTypeDef htim2, htim7;
  *  4           983
  */
 
-#define PWM_PRESCALER_FCLK 1000000
-#define TONE_PRESCALER_FCLK 1000
+#define PWM_PRESCALER_FCLK (HCLK_Hz / (BUZZ_PWM_PSC_DIV + 1))
+#define TONE_PRESCALER_FCLK (HCLK_Hz / (BUZZ_TONE_PSC_DIV + 1))
 #define TONE_TIMER &htim7
 #define PWM_TIMER &htim2
 #define PWM_TIMER_CH TIM_CHANNEL_1

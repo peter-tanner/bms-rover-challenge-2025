@@ -316,6 +316,7 @@ void bq769x2_direct_cmd_write(uint8_t command, uint16_t data)
     // Control_status, alarm_status, alarm_enable all 2 bytes long
     bq769x2_iic_write_reg(command, TX_data, 2);
     bq769x2_delay_us(50); // Table 9-2. Command/Subcommand Operation Time
+    // TODO: clarify if delay required.
 }
 
 uint16_t bq769x2_direct_cmd_read(uint8_t command)
@@ -324,7 +325,7 @@ uint16_t bq769x2_direct_cmd_read(uint8_t command)
     bq769x2_iic_read_reg(command, rx, 2);
     // Table 9-2. Command/Subcommand Operation Time
     // This will clock-stretch if needs delay
-    bq769x2_delay_us(50);
+    bq769x2_delay_us(50); // TODO: clock stretching should mean this is not required, clarify?
     return (rx[1] << 8) | (rx[0] << 0);
 }
 

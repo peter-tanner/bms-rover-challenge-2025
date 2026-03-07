@@ -3,9 +3,9 @@
 #include "main.h"
 
 void bq769x2_delay_us(uint16_t us)
-{                                      // Sets the delay in microseconds.
-    __HAL_TIM_SET_COUNTER(&htim15, 0); // set the counter value a 0
-    while (__HAL_TIM_GET_COUNTER(&htim15) < us)
+{                                             // Sets the delay in microseconds.
+    __HAL_TIM_SET_COUNTER(DELAY_US_TIMER, 0); // set the counter value a 0
+    while (__HAL_TIM_GET_COUNTER(DELAY_US_TIMER) < us)
         ; // wait for the counter to reach the us input in the parameter
 }
 

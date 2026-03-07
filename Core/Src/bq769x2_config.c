@@ -1,5 +1,6 @@
 #include "bq769x2_config.h"
 #include "bq769x2.h"
+#include "can_types.h"
 #include "main.h"
 #include "stm32g0xx_hal.h"
 #include "stm32g0xx_hal_gpio.h"
@@ -12,7 +13,17 @@
 // #define DISABLE_SF
 // #define DISABLE_CELL_BALANCING
 #define DISABLE_HWDF
+
+/*
+ * CONSTANTS
+ */
 #define AMBIENT_TEMPERATURE 35
+
+// NOTE: Affects temperature protections update rate.
+#define SLEEP_MODE_UPDATE_TIME_s 4 * (5) + 1
+
+// NOTE: MUST BE GREATER THAN SLEEP_MODE_UPDATE_TIME_s
+#define HWDF_TIME_s 60
 
 void bq769x2_init(void)
 {
@@ -63,12 +74,12 @@ void bq769x2_init(void)
 
     // SLEEP mode options
     // PowerConfig_WK_SPD_24ms -> minimum wake comparator current: i = 10 * 0.010mV / 1mR = 0.100A
-    SET_WakeComparatorCurrent_mA(500); // DEFAULT
-    SET_SleepCurrent_mA(20);           // DEFAULT
-    SET_VoltageTime_s(4 * (5) + 1);
+    SET_WakeComparatorCurrent_mA(500);           // DEFAULT
+    SET_SleepCurrent_mA(20);                     // DEFAULT
+    SET_VoltageTime_s(SLEEP_MODE_UPDATE_TIME_s); // NOTE: Affects temperature protections update rate.
     SET_SleepHysteresisTime_DEFAULT();
     SET_SleepChargerVoltageThreshold_mV(52000); // 13cell * 4V/cell = 52V. (5% of capacity unused at 4V co).
-    SET_SleepChargerPACKTOSDelta_DEFAULT();
+    SET_SleepChargerPACKTOSDelta_mV(1500);
     // TODO: maybe only works with disabled SLEEPCHG -> actual voltage buildup over fets.
     // (0.75mR/4 * 2) * 0.25A =
 
@@ -287,7 +298,8 @@ void bq769x2_init(void)
 #endif
     // HWD HOST WATCHDOG DELAY
     SET_HWDRegulatorOptions_Raw(HWDRegulatorOptions_TOGGLE_TIME_5s | HWDRegulatorOptions_TOGGLE_OPT_REG12_OFFON);
-    SET_HWDDelay_s(60);
+    SET_HWDDelay_s(HWDF_TIME_s);
+    static_assert((HWDF_TIME_s) > (SLEEP_MODE_UPDATE_TIME_s), "HOST WATCHDOG TIMER SHOULD BE GREATER THAN SLEEP MODE UPDATE RATE TO PREVENT PREMATURE WATCHDOG");
 
     /*
      * PERMANENT FAILURE PROTECTIONS
@@ -343,12 +355,11 @@ void bq769x2_init(void)
     // MOSFETS
     // TODO: CHECK IF PDSG IS REQUIRED.
     // SFET: SERIES (BACK TO BACK) MOSFETS
-    //
+    // SLEEPCHG disabled. Use PACK-TOS voltage delta for wake.
     SET_FETOptions_Raw(FETOptions_FET_CTRL_EN |
                        // FETOptions_PDSG_EN |
                        //    FETOptions_HOST_FET_EN |
-                       FETOptions_SFET |
-                       FETOptions_SLEEPCHG); // TODO: FOR NOW ENABLE CHARGE IN SLEEP TO PREVENT JUMPSCARES ABOUT BMS APPEARING SEEMINGLY BROKEN...
+                       FETOptions_SFET);
 
     SET_ChgPumpControl_Raw(ChgPumpControl_CPEN); // 11V overdrive, enable charge pump
     // https://www.infineon.com/assets/row/public/documents/24/49/infineon-ipt007n06n-datasheet-en.pdf
