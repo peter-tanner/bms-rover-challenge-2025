@@ -133,7 +133,7 @@ void HAL_FDCAN_MspInit(FDCAN_HandleTypeDef* hfdcan)
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
     /* FDCAN2 interrupt Init */
-    HAL_NVIC_SetPriority(TIM16_FDCAN_IT0_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(TIM16_FDCAN_IT0_IRQn, 1, 0);
     HAL_NVIC_EnableIRQ(TIM16_FDCAN_IT0_IRQn);
     /* USER CODE BEGIN FDCAN2_MspInit 1 */
 
@@ -318,7 +318,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* huart)
     __HAL_LINKDMA(huart,hdmatx,hdma_lpuart1_tx);
 
     /* LPUART1 interrupt Init */
-    HAL_NVIC_SetPriority(USART3_4_5_6_LPUART1_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(USART3_4_5_6_LPUART1_IRQn, 1, 0);
     HAL_NVIC_EnableIRQ(USART3_4_5_6_LPUART1_IRQn);
     /* USER CODE BEGIN LPUART1_MspInit 1 */
 
@@ -392,7 +392,7 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
     /* Peripheral clock enable */
     __HAL_RCC_TIM6_CLK_ENABLE();
     /* TIM6 interrupt Init */
-    HAL_NVIC_SetPriority(TIM6_DAC_LPTIM1_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(TIM6_DAC_LPTIM1_IRQn, 1, 0);
     HAL_NVIC_EnableIRQ(TIM6_DAC_LPTIM1_IRQn);
     /* USER CODE BEGIN TIM6_MspInit 1 */
 
@@ -443,7 +443,7 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
     /* Peripheral clock enable */
     __HAL_RCC_TIM16_CLK_ENABLE();
     /* TIM16 interrupt Init */
-    HAL_NVIC_SetPriority(TIM16_FDCAN_IT0_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(TIM16_FDCAN_IT0_IRQn, 1, 0);
     HAL_NVIC_EnableIRQ(TIM16_FDCAN_IT0_IRQn);
     /* USER CODE BEGIN TIM16_MspInit 1 */
 

@@ -19,8 +19,9 @@
  */
 #define AMBIENT_TEMPERATURE 35
 
-// NOTE: Affects temperature protections update rate.
-#define SLEEP_MODE_UPDATE_TIME_s 4 * (5) + 1
+#ifndef SLEEP_MODE_UPDATE_TIME_s
+#error "NEEDS SLEEP_MODE_UPDATE_TIME_s DEFINED IN MAIN. (AFFECTS WATCHDOG)"
+#endif
 
 // NOTE: MUST BE GREATER THAN SLEEP_MODE_UPDATE_TIME_s
 #define HWDF_TIME_s 60

@@ -67,16 +67,17 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define HCLK_MHz 16
-#define ALARM_CALLBACK_WATCHDOG_ms 6000
-#define HCLK_kHz (HCLK_MHz * 1000)
-#define BUZZ_TONE_PSC_DIV (HCLK_kHz - 1)
-#define ALARM_WATCHDOG_PSC_DIV (HCLK_kHz - 1)
-#define BQ769X2_DELAY_us_PSC_DIV (HCLK_MHz - 1)
-#define CAN_TIMEOUT_PSC_DIV (HCLK_kHz - 1)
-#define CAN_TIMEOUT_ms 50
-#define BUZZ_PWM_PSC_DIV (HCLK_MHz - 1)
 #define HCLK_Hz (HCLK_MHz * 1000000)
+#define CAN_TIMEOUT_PSC_DIV (HCLK_kHz - 1)
+#define BUZZ_PWM_PSC_DIV (HCLK_MHz - 1)
+#define BUZZ_TONE_PSC_DIV (HCLK_kHz - 1)
+#define HCLK_MHz 16
+#define ALARM_WATCHDOG_PSC_DIV (HCLK_kHz - 1)
+#define SLEEP_MODE_UPDATE_TIME_s 4 * (5) + 1
+#define ALARM_CALLBACK_WATCHDOG_ms ((SLEEP_MODE_UPDATE_TIME_s + 1) * 1000)
+#define CAN_TIMEOUT_ms 50
+#define HCLK_kHz (HCLK_MHz * 1000)
+#define BQ769X2_DELAY_us_PSC_DIV (HCLK_MHz - 1)
 #define ALERT_Pin GPIO_PIN_13
 #define ALERT_GPIO_Port GPIOC
 #define ALERT_EXTI_IRQn EXTI4_15_IRQn

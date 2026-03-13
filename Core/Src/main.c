@@ -582,6 +582,7 @@ int main(void)
     FDCAN2_classic_config();
 #define USERA_mA 10
 #define USERV_mV 10
+    HAL_GPIO_WritePin(FAULT_LAMP_GPIO_Port, FAULT_LAMP_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_SET);
     HAL_TIM_Base_Start(&htim15);
     // TIM6 -> ALERT INTERRUPT WATCHDOG
@@ -612,6 +613,7 @@ int main(void)
     bq769x2_initialized = 1;
     alarm_cb();
     sfx_onetone(932, 180, 253);
+    HAL_GPIO_WritePin(FAULT_LAMP_GPIO_Port, FAULT_LAMP_Pin, GPIO_PIN_RESET);
     bq769x2_delay_us(60000);
     HAL_PWR_EnableSleepOnExit(); // EASY SLEEP MODE - TODO: REIMPLEMENT WITH STOP MODE FOR MORE SAVING.
 
@@ -1051,7 +1053,7 @@ static void MX_DMA_Init(void)
 
   /* DMA interrupt init */
   /* DMA1_Channel1_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 1, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
 
 }
